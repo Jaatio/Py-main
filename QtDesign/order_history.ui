@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_order_history</class>
+ <widget class="QDialog" name="Dialog_order_history">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>696</width>
+    <height>489</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>696</width>
+    <height>489</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Мастер пол | Просмотр заказов</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(244, 232, 211);</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>250</width>
+     <height>137</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Выберите заказ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QComboBox" name="comboBox_name_change">
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_cancel_order">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Отменить заказ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_buy">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Оплатить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QComboBox" name="comboBox_change_order">
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_orders_output">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>421</width>
+     <height>491</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>150</y>
+     <width>111</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+     <horstretch>55</horstretch>
+     <verstretch>55</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>111</width>
+     <height>111</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../task and images/Мастер пол.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

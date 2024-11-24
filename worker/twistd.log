@@ -1,0 +1,122 @@
+2024-11-21 00:36:20+0300 [-] Loading buildbot.tac...
+2024-11-21 00:36:20+0300 [-] Loaded.
+2024-11-21 00:36:20+0300 [-] twistd 23.10.0 (C:\Users\Memek\AppData\Local\Programs\Python\Python312\python.exe 3.12.0) starting up.
+2024-11-21 00:36:20+0300 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2024-11-21 00:36:20+0300 [-] Starting Worker -- version: 4.1.0
+2024-11-21 00:36:20+0300 [-] recording hostname in twistd.hostname
+2024-11-21 00:36:32+0300 [-] Traceback (most recent call last):
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\base.py", line 311, in recordHostname
+2024-11-21 00:36:32+0300 [-]     hostname = os.uname()[1]  # only on unix
+2024-11-21 00:36:32+0300 [-]                ^^^^^^^^
+2024-11-21 00:36:32+0300 [-] AttributeError: module 'os' has no attribute 'uname'. Did you mean: 'name'?
+2024-11-21 00:36:32+0300 [-] 
+2024-11-21 00:36:32+0300 [-] During handling of the above exception, another exception occurred:
+2024-11-21 00:36:32+0300 [-] 
+2024-11-21 00:36:32+0300 [-] Traceback (most recent call last):
+2024-11-21 00:36:32+0300 [-]   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-11-21 00:36:32+0300 [-]   File "<frozen runpy>", line 88, in _run_code
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Scripts\buildbot-worker.exe\__main__.py", line 7, in <module>
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\scripts\runner.py", line 276, in run
+2024-11-21 00:36:32+0300 [-]     sys.exit(subcommandFunction(subconfig))
+2024-11-21 00:36:32+0300 [-]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\scripts\start.py", line 84, in startCommand
+2024-11-21 00:36:32+0300 [-]     return startWorker(basedir, config['quiet'], config['nodaemon'])
+2024-11-21 00:36:32+0300 [-]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\scripts\start.py", line 113, in startWorker
+2024-11-21 00:36:32+0300 [-]     return launch(nodaemon)
+2024-11-21 00:36:32+0300 [-]            ^^^^^^^^^^^^^^^^
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\scripts\start.py", line 150, in launch
+2024-11-21 00:36:32+0300 [-]     run()
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\scripts\twistd.py", line 35, in run
+2024-11-21 00:36:32+0300 [-]     app.run(runApp, ServerOptions)
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\application\app.py", line 673, in run
+2024-11-21 00:36:32+0300 [-]     runApp(config)
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\scripts\twistd.py", line 29, in runApp
+2024-11-21 00:36:32+0300 [-]     runner.run()
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\application\app.py", line 374, in run
+2024-11-21 00:36:32+0300 [-]     self.postApplication()
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\scripts\_twistw.py", line 52, in postApplication
+2024-11-21 00:36:32+0300 [-]     app.startApplication(self.application, not self.config["no_save"])
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\application\app.py", line 688, in startApplication
+2024-11-21 00:36:32+0300 [-]     service.IService(application).startService()
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\twisted\application\service.py", line 276, in startService
+2024-11-21 00:36:32+0300 [-]     service.startService()
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\pb.py", line 757, in startService
+2024-11-21 00:36:32+0300 [-]     WorkerBase.startService(self)
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\base.py", line 301, in startService
+2024-11-21 00:36:32+0300 [-]     self.recordHostname(self.basedir)
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\site-packages\buildbot_worker\base.py", line 315, in recordHostname
+2024-11-21 00:36:32+0300 [-]     hostname = socket.getfqdn()
+2024-11-21 00:36:32+0300 [-]                ^^^^^^^^^^^^^^^^
+2024-11-21 00:36:32+0300 [-]   File "C:\Users\Memek\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 795, in getfqdn
+2024-11-21 00:36:32+0300 [-]     hostname, aliases, ipaddrs = gethostbyaddr(name)
+2024-11-21 00:36:32+0300 [-]                                  ^^^^^^^^^^^^^^^^^^^
+2024-11-21 00:36:32+0300 [-] KeyboardInterrupt
+2024-11-21 00:37:49+0300 [-] Loading buildbot.tac...
+2024-11-21 00:37:49+0300 [-] Loaded.
+2024-11-21 00:37:49+0300 [-] twistd 23.10.0 (C:\Users\Memek\AppData\Local\Programs\Python\Python312\python.exe 3.12.0) starting up.
+2024-11-21 00:37:49+0300 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2024-11-21 00:37:49+0300 [-] Starting Worker -- version: 4.1.0
+2024-11-21 00:37:49+0300 [-] recording hostname in twistd.hostname
+2024-11-21 00:38:01+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:03+0300 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 1.9508405582138666 seconds.
+2024-11-21 00:38:03+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:05+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:07+0300 [-] Scheduling retry 2 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 2.915639090205127 seconds.
+2024-11-21 00:38:07+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:10+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:12+0300 [-] Scheduling retry 3 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 3.417095138594754 seconds.
+2024-11-21 00:38:12+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:16+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:18+0300 [-] Scheduling retry 4 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 5.291211608585259 seconds.
+2024-11-21 00:38:18+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:23+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:25+0300 [-] Scheduling retry 5 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 8.030676879653495 seconds.
+2024-11-21 00:38:25+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:33+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:35+0300 [-] Scheduling retry 6 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 11.64237647558486 seconds.
+2024-11-21 00:38:35+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:47+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:38:49+0300 [-] Scheduling retry 7 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 17.791723961712638 seconds.
+2024-11-21 00:38:49+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:39:07+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:39:09+0300 [-] Scheduling retry 8 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x0000014A8C59AAB0> in 26.45208412140583 seconds.
+2024-11-21 00:39:09+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x0000014A8BD9DE80>
+2024-11-21 00:39:28+0300 [-] Received SIGINT, shutting down.
+2024-11-21 00:39:28+0300 [-] Main loop terminated.
+2024-11-21 00:39:28+0300 [-] Server Shut Down.
+2024-11-21 00:39:28+0300 [-] Server Shut Down.
+2024-11-21 00:46:51+0300 [-] Loading buildbot.tac...
+2024-11-21 00:46:51+0300 [-] Loaded.
+2024-11-21 00:46:51+0300 [-] twistd 23.10.0 (C:\Users\Memek\AppData\Local\Programs\Python\Python312\python.exe 3.12.0) starting up.
+2024-11-21 00:46:51+0300 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2024-11-21 00:46:51+0300 [-] Starting Worker -- version: 4.1.0
+2024-11-21 00:46:51+0300 [-] recording hostname in twistd.hostname
+2024-11-21 00:47:03+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:05+0300 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 2.4233097239433943 seconds.
+2024-11-21 00:47:05+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:07+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:09+0300 [-] Scheduling retry 2 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 2.765201108673909 seconds.
+2024-11-21 00:47:09+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:12+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:14+0300 [-] Scheduling retry 3 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 4.038593141050833 seconds.
+2024-11-21 00:47:14+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:18+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:20+0300 [-] Scheduling retry 4 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 5.275934871476322 seconds.
+2024-11-21 00:47:20+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:25+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:28+0300 [-] Scheduling retry 5 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 7.662615386534002 seconds.
+2024-11-21 00:47:28+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:35+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:37+0300 [-] Scheduling retry 6 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 11.780578256917364 seconds.
+2024-11-21 00:47:37+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:49+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:47:51+0300 [-] Scheduling retry 7 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 17.99574227082608 seconds.
+2024-11-21 00:47:51+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:48:09+0300 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:48:11+0300 [-] Scheduling retry 8 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x000001DACFFEAE40> in 26.406062779883328 seconds.
+2024-11-21 00:48:11+0300 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x000001DACFFEAC00>
+2024-11-21 00:48:37+0300 [-] Received SIGINT, shutting down.
+2024-11-21 00:48:37+0300 [-] Main loop terminated.
+2024-11-21 00:48:37+0300 [-] Server Shut Down.
+2024-11-21 00:48:37+0300 [-] Server Shut Down.

@@ -1,0 +1,23 @@
+#pyuic5 .\QtDesign\Autorization_win.ui -o .\Gui_win\Autorization_win.py
+
+
+
+pyuic5 .\QtDesign\Autorization_win.ui -o .\Gui_win\Autorization_win.py
+pyuic5 .\QtDesign\Registration_win.ui -o .\Gui_win\Registration_win.py
+pyuic5 .\QtDesign\Manager_win.ui -o .\Gui_win\Manager_win.py
+pyuic5 .\QtDesign\Partner_win.ui -o .\Gui_win\Partner_win.py
+pyuic5 .\QtDesign\Data_edit.ui -o .\Gui_win\Data_edit.py
+pyuic5 .\QtDesign\realisation_partner_products.ui -o .\Gui_win\realisation_partner_products.py
+pyuic5 .\QtDesign\add_partner.ui -o .\Gui_win\add_partner.py
+pyuic5 .\QtDesign\Products_type_method.ui -o .\Gui_win\Products_type_method.py
+
+
+
+Заменить обратные слэши на двойные обратные слэши \\.
+Использовать сырые строки, добавив префикс r перед строкой пути.
+Заменить обратные слэши на обычные прямые слэши /, которые Python также понимает.
+
+
+errors
+Аутентификация tuple indices must be integers or slices, not str
+

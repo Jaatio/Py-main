@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Manager_win</class>
+ <widget class="QDialog" name="Manager_win">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>953</width>
+    <height>383</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>953</width>
+    <height>380</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Мастер пол | Управление</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(244, 232, 211);</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>10</y>
+     <width>191</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_edit_orders">
+      <property name="maximumSize">
+       <size>
+        <width>190</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Заказы</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_partner_regist">
+      <property name="maximumSize">
+       <size>
+        <width>190</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Регистрация партнера</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_edit_data">
+      <property name="maximumSize">
+       <size>
+        <width>190</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Изменить данные</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_partners_products_realization">
+      <property name="maximumSize">
+       <size>
+        <width>190</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Таблица реализации продукции</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_calculate_m">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Рассчет продукции</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_exit_m">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Выход</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

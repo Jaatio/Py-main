@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialo_edit_orders</class>
+ <widget class="QDialog" name="Dialo_edit_orders">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>874</width>
+    <height>563</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Мастер пол | Просмотр заказов</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(244, 232, 211);</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget_orders_output">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>571</width>
+     <height>331</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>20</y>
+     <width>251</width>
+     <height>259</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Выберите заказ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QComboBox" name="comboBox_change_name_partner">
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_confirm_order">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Принять заказ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_canceled_order">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Отклонить заказ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QComboBox" name="comboBox_change_order_partner">
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Изменить статус заказа</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="pushButton_in_process">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>В процессе</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_order_created">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>121</horstretch>
+        <verstretch>121</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{     
+background-color: #67BA80;  /* Цвет фона кнопки */    
+color: white;  /* Цвет текста */     border-radius: 5px;  /* Скругленные углы */ 
+}</string>
+      </property>
+      <property name="text">
+       <string>Создан</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

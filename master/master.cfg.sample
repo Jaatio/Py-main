@@ -1,0 +1,118 @@
+# -*- python -*-
+# ex: set filetype=python:
+
+from buildbot.plugins import *
+
+# Основной объект конфигурации Buildbot
+c = BuildmasterConfig = {}
+
+####### НАСТРОЙКА ВОРКЕРОВ #######
+
+# Добавьте здесь список воркеров. Укажите уникальные имена и пароли.
+c['workers'] = [
+    worker.Worker("worker1", "password1"),  # Замените на имя и пароль воркера
+    worker.Worker("worker2", "password2")  # Добавьте дополнительные воркеры при необходимости
+]
+
+# Порт для взаимодействия мастера с воркерами. Убедитесь, что этот порт не занят.
+c['protocols'] = {'pb': {'port': 9989}}
+
+####### НАСТРОЙКА ИСТОЧНИКОВ ИЗМЕНЕНИЙ #######
+
+# Добавьте источники изменений (репозитории) для мониторинга.
+c['change_source'] = []
+c['change_source'].append(changes.GitPoller(
+    'https://github.com/username/your-repo.git',  # Укажите URL вашего репозитория
+    workdir='gitpoller-workdir',                 # Рабочая директория
+    branch='main',                               # Укажите ветку
+    pollInterval=300                             # Интервал проверки изменений (в секундах)
+))
+
+####### НАСТРОЙКА ПЛАНИРОВЩИКОВ #######
+
+# Добавьте планировщики для автоматического и ручного запуска билдов.
+from buildbot.schedulers.basic import SingleBranchScheduler
+from buildbot.changes.gitpoller import GitPoller
+
+c['schedulers'] = [
+    SingleBranchScheduler(
+        name="all",
+        change_filter=util.ChangeFilter(branch='main'),
+        treeStableTimer=None,
+        builderNames=["run-tests"]
+    )
+]
+
+c['change_source'] = [
+    GitPoller(
+        repourl='https://github.com/your-repo.git',  # замените на ваш репозиторий
+        branch='main'
+    )
+]
+
+####### НАСТРОЙКА БИЛДЕРОВ #######
+
+# Создайте BuildFactory для функционального тестирования.
+test_factory = util.BuildFactory()
+# Шаг 1: Клонирование репозитория
+test_factory.addStep(steps.Git(
+    repourl='https://github.com/username/your-repo.git',  # Укажите URL вашего репозитория
+    mode='full'  # Полное клонирование
+))
+# Шаг 2: Установка зависимостей (замените команду на подходящую для вашего проекта)
+test_factory.addStep(steps.ShellCommand(
+    command=["pip", "install", "-r", "requirements.txt"]  # Укажите путь к файлу зависимостей
+))
+# Шаг 3: Запуск функциональных тестов (замените на вашу команду)
+test_factory.addStep(steps.ShellCommand(
+    command=["pytest", "tests/functional"]  # Укажите путь к вашим тестам
+))
+
+from buildbot.config import BuilderConfig
+from buildbot.steps.shell import ShellCommand
+
+c['builders'] = [
+    BuilderConfig(
+        name="run-tests",
+        workernames=["example-worker"],
+        factory=util.BuildFactory([
+            ShellCommand(command=["pytest", "tests/"])  # замените 'tests/' на папку с тестами
+        ])
+    )
+]
+
+
+####### ВЕБ-ИНТЕРФЕЙС #######
+
+# Настройка веб-интерфейса Buildbot.
+c['www'] = dict(
+    port=8010,  # Порт для веб-интерфейса
+    plugins=dict(
+        waterfall_view={},
+        console_view={},
+        grid_view={}
+    )
+)
+
+from buildbot.worker import Worker
+c['workers'] = [Worker('example-worker', 'example-pass')]
+
+# URL для доступа к веб-интерфейсу.
+c['buildbotURL'] = "http://localhost:8010/"
+
+####### ПРОЕКТ И БАЗА ДАННЫХ #######
+
+# Укажите заголовок и ссылку на проект.
+c['title'] = "Functional Testing CI"  # Название проекта
+c['titleURL'] = "https://github.com/username/your-repo"  # URL проекта
+
+# Укажите базу данных. SQLite используется для тестов, замените на PostgreSQL или MySQL для продакшена.
+c['db'] = {
+    'db_url': "sqlite:///state.sqlite"
+}
+
+####### СЕРВИСЫ #######
+
+# Настройте дополнительные сервисы, например, уведомления в Slack или email.
+c['services'] = []
+
